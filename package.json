@@ -9,6 +9,7 @@
   "description": "Components for quickly implementing angular-file-upload",
   "private": false,
   "dependencies": {
+    "angular": "1.x.x",
     "angular-file-upload": "^2.5.0"
   }
 }

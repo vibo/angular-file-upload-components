@@ -5,7 +5,7 @@ import { FileInputComponent } from './file-input/file-input.component';
 import { FileSelectionComboComponent } from './file-selection-combo/file-selection-combo.component';
 
 export default angular
-    .module('IqFile', [])
+    .module('AngularFileUploadComponentsModule', [])
     .component('fileDropZone', FileDropZoneComponent)
     .component('fileInput', FileInputComponent)
     .component('fileSelectionCombo', FileSelectionComboComponent)
