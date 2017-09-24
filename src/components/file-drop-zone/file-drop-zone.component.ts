@@ -1,7 +1,10 @@
+import './file-drop-zone.component.less';
+
+// FIXME: Posible to bubble nv-file-over?
 export const FileDropZoneComponent = {
     transclude: true,
     bindings: {
-        onDrop: '&'
+        onSet: '&'
     },
     template: `
         <div 
@@ -9,14 +12,14 @@ export const FileDropZoneComponent = {
             nv-file-over 
             uploader="$ctrl.uploader" 
             over-class="afu-file-drop-zone--active" 
-            class="afu-file-drop-zone"
+            class="afu-file-drop-zone afu-flex"
         >
-            <ng-transclude class="afu-file-drop-zone__content">
+            <ng-transclude class="afu-file-drop-zone__content afu-flex--flexed">
             </ng-transclude>
         </div>
     `,
     controller: class FileDropZoneCOmponentController {
-        public onDrop: (payload: {$event: File[]}) => void;
+        public onSet: (payload: {$event: File[]}) => void;
         public uploader: any;
 
         static $inject: string[] = [
@@ -43,7 +46,7 @@ export const FileDropZoneComponent = {
 
         private handleFileDrop(files: any) {
             if (files && files.length) {
-                this.onDrop({
+                this.onSet({
                     $event: files.map(function(file: any) { return file._file; })
                 });
             }

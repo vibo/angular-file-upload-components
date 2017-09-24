@@ -1,0 +1,56 @@
+.afu-file-drop-zone {
+  border: 2px dashed rgba(0, 0, 0, 0.12);
+  min-height: 150px;
+  transition: border-color 0.175s ease-out;
+}
+.afu-file-drop-zone__content {
+  display: block;
+}
+.afu-file-drop-zone--active {
+  border-color: rgba(0, 0, 0, 0.35);
+}
+.afu-file-input__button {
+  position: relative;
+  border: none;
+  overflow: hidden;
+}
+.afu-file-input__field {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  height: 500;
+  width: 0;
+  padding: 0 0 0 105%;
+  cursor: pointer;
+}
+.afu-flex {
+  display: flex;
+}
+.afu-flex--centralize {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.afu-flex--flexed {
+  flex: 1;
+}
+.afu-flex--row {
+  flex-direction: row;
+}
+.afu-helper-block {
+  display: block;
+}
+.afu--hidden {
+  display: none;
+  visibility: hidden;
+}
+.afu--text-center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map*/
