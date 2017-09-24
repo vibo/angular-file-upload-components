@@ -23,7 +23,7 @@ export const FileInputComponent = {
     controller: class FileInputComponentController {
         public text: string;
         public onChange: (payload: {$event: File[]}) => void;
-        public uploader;
+        public uploader: any;
 
         static $inject: string[] = [
             '$element',
@@ -31,8 +31,8 @@ export const FileInputComponent = {
         ];
 
         constructor(
-            private $element,
-            private FileUploader
+            private $element: angular.IRootElementService,
+            private FileUploader: any
         ) {
             this.uploader = new FileUploader();
         }
@@ -49,10 +49,10 @@ export const FileInputComponent = {
             this.uploader.clearQueue();
         }
 
-        private handleFileDrop(files) {
+        private handleFileDrop(files: any) {
             if (files && files.length) {
                 this.onChange({
-                    $event: files.map(function(file) { return file._file; })
+                    $event: files.map(function(file: any) { return file._file; })
                 });
             }
 
@@ -61,8 +61,8 @@ export const FileInputComponent = {
 
         public triggerFilePicker() {
             angular
-                .element('.file-input__input', this.$element)
-                .trigger('click');
+                .element('.file-input__input')
+                .triggerHandler('click');
         }
     } 
 };

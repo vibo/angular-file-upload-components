@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title></title>
+        <title>Demo</title>
     </head>
     <body>
+        <demo-app>
+            <afu-drop-zone></afu-drop-zone>
+
+            <afu-file-input></afu-file-input>
+
+            <afu-selection-combo></afu-selection-combo>
+        </demo-app>
+
+        <script>
+            (function() {
+                setTimeout(initiate);
+
+                function initiate() {
+                    var root = document.querySelector('demo-app');
+
+                    angular
+                        .module('demoApp', ['AngularFileUploadComponents']);
+                        
+                    angular
+                        .bootstrap(root, ['demoApp']);
+                }
+            }());
+        </script>
     </body>
 </html>

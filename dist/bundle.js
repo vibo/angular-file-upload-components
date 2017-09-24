@@ -91,9 +91,9 @@ var file_input_component_1 = __webpack_require__(5);
 var file_selection_combo_component_1 = __webpack_require__(6);
 exports.default = angular
     .module('AngularFileUploadComponents', [])
-    .component('fileDropZone', file_drop_zone_component_1.FileDropZoneComponent)
-    .component('fileInput', file_input_component_1.FileInputComponent)
-    .component('fileSelectionCombo', file_selection_combo_component_1.FileSelectionComboComponent)
+    .component('afuDropZone', file_drop_zone_component_1.FileDropZoneComponent)
+    .component('afuFileInput', file_input_component_1.FileInputComponent)
+    .component('afuSelectionCombo', file_selection_combo_component_1.FileSelectionComboComponent)
     .name;
 
 
@@ -34074,8 +34074,8 @@ exports.FileInputComponent = {
             };
             FileInputComponentController.prototype.triggerFilePicker = function () {
                 angular
-                    .element('.file-input__input', this.$element)
-                    .trigger('click');
+                    .element('.file-input__input')
+                    .triggerHandler('click');
             };
             return FileInputComponentController;
         }()),

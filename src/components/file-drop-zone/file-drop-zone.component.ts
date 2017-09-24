@@ -16,14 +16,14 @@ export const FileDropZoneComponent = {
     `,
     controller: class FileDropZoneCOmponentController {
         public onDrop: (payload: {$event: File[]}) => void;
-        public uploader;
+        public uploader: any;
 
         static $inject: string[] = [
             'FileUpload'
         ];
 
         constructor(
-            private FileUploader
+            private FileUploader: any
         ) {
             this.uploader = new FileUploader();
         }
@@ -40,10 +40,10 @@ export const FileDropZoneComponent = {
             this.uploader.clearQueue();
         }
 
-        private handleFileDrop(files) {
+        private handleFileDrop(files: any) {
             if (files && files.length) {
                 this.onDrop({
-                    $event: files.map(function(file) { return file._file; })
+                    $event: files.map(function(file: any) { return file._file; })
                 });
             }
 

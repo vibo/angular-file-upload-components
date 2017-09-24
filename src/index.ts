@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import * as angularFileUpload from 'angular-file-upload';
 
 import { FileDropZoneComponent } from './components/file-drop-zone/file-drop-zone.component';
 import { FileInputComponent } from './components/file-input/file-input.component';
