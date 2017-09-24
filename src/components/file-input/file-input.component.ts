@@ -60,8 +60,8 @@ export const FileInputComponent = {
         }
 
         public triggerFilePicker() {
-            angular
-                .element('.file-input__input')
+            this.$element
+                .find('.file-input__input')
                 .triggerHandler('click');
         }
     } 
