@@ -6,7 +6,7 @@ import { FileSelectionComboComponent } from './components/file-selection-combo/f
 
 export default angular
     .module('AngularFileUploadComponents', [])
-    .component('fileDropZone', FileDropZoneComponent)
-    .component('fileInput', FileInputComponent)
-    .component('fileSelectionCombo', FileSelectionComboComponent)
+    .component('afuDropZone', FileDropZoneComponent)
+    .component('afuFileInput', FileInputComponent)
+    .component('afuSelectionCombo', FileSelectionComboComponent)
     .name;
