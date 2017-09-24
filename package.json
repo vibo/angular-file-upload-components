@@ -1,6 +1,6 @@
 {
   "name": "angular-file-upload-components",
-  "version": "0.2.1",
+  "version": "0.2.4",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack",
