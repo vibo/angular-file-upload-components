@@ -4,12 +4,12 @@ export const FileSelectionComboComponent = {
         onSet: '&'
     },
     template: `
-        <file-drop-zone 
+        <afu-file-drop-zone 
             on-file-drop="$ctrl.onSet({$event: $event})"
-            class="text-center"
+            class="afu--text-center"
         >
             <div 
-                class="flex--centralize" 
+                class="afu-flex--centralize" 
                 style="height: 100%;"
             >
                 <div>
@@ -22,14 +22,14 @@ export const FileSelectionComboComponent = {
                         <h4>{{ $ctrl.file.name }}</h4>
                     </div>
     
-                    <file-input 
+                    <afu-file-input 
                         text="$ctrl.getFileInputText()" 
                         on-change="$ctrl.onSet({ $event: $event })"
                     >
-                    </file-input>
+                    </afu-file-input>
                 </div>
             </div>
-        </file-drop-zone>
+        </afu-file-drop-zone>
     `,
     controller: class FileSelectionComboComponentController {
         public file: File;

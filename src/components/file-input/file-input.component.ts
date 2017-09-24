@@ -8,7 +8,7 @@ export const FileInputComponent = {
     template: `
         <button 
             ng-click="$ctrl.triggerFilePicker()" 
-            class="btn btn-default"
+            class="afu-button"
         >
             {{ $ctrl.text }}
         </button>
@@ -17,12 +17,12 @@ export const FileInputComponent = {
             type="file" 
             nv-file-select 
             uploader="$ctrl.uploader" 
-            class="file-input__input hidden" 
+            class="afu-file-input__input afu--hidden" 
         />
     `,
     controller: class FileInputComponentController {
-        public text: string;
         public onChange: (payload: {$event: File[]}) => void;
+        public text: string;
         public uploader: any;
 
         static $inject: string[] = [
@@ -61,7 +61,7 @@ export const FileInputComponent = {
 
         public triggerFilePicker() {
             this.$element
-                .find('.file-input__input')
+                .find('input[type="file"]')
                 .triggerHandler('click');
         }
     } 

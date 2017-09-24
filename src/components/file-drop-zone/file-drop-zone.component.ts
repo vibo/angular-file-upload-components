@@ -8,10 +8,10 @@ export const FileDropZoneComponent = {
             nv-file-drop 
             nv-file-over 
             uploader="$ctrl.uploader" 
-            over-class="file-drop-zone--active" 
-            class="file-drop-zone"
+            over-class="afu-file-drop-zone--active" 
+            class="afu-file-drop-zone"
         >
-            <ng-transclude class="file-drop-zone__content">
+            <ng-transclude class="afu-file-drop-zone__content">
             </ng-transclude>
         </div>
     `,
