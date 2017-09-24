@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Demo</title>
-    <script type="text/javascript" src="../bundle.js"></script></head>
+    <script type="text/javascript" src="bundle.js"></script></head>
     <body>
         <demo-app>
             <afu-drop-zone></afu-drop-zone>
@@ -12,6 +12,7 @@
             <afu-selection-combo></afu-selection-combo>
         </demo-app>
 
+        <script src="/node_modules/angular-file-upload/dist/angular-file-upload.js"></script>
         <script>
             (function() {
                 setTimeout(initiate);
@@ -20,7 +21,10 @@
                     var root = document.querySelector('demo-app');
 
                     angular
-                        .module('demoApp', ['AngularFileUploadComponents']);
+                        .module('demoApp', [
+                            'angularFileUpload', 
+                            'AngularFileUploadComponents'
+                        ]);
                         
                     angular
                         .bootstrap(root, ['demoApp']);

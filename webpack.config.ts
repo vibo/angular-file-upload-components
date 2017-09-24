@@ -5,10 +5,16 @@ import { config as commonConfig } from './config/webpack.common.config';
 import { config as productionConfig } from './config/webpack.prod.config';
 import { config as developmentConfig } from './config/webpack.dev.config';
 
-export default function(environment: any): webpack.Configuration {
+export default function(environment: any = {}): webpack.Configuration {
     return merge({}, commonConfig, 
-        environment && environment.production
+        environment.production
             ? productionConfig
             : developmentConfig    
-    );
+    , {
+        output: {
+            filename: environment.production
+                ? 'bundle.min.js'
+                : 'bundle.js'
+        }
+    });
 }

@@ -1,4 +1,5 @@
 export const FileDropZoneComponent = {
+    transclude: true,
     bindings: {
         onDrop: '&'
     },
@@ -19,7 +20,7 @@ export const FileDropZoneComponent = {
         public uploader: any;
 
         static $inject: string[] = [
-            'FileUpload'
+            'FileUploader'
         ];
 
         constructor(

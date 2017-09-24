@@ -27,7 +27,7 @@ export const FileInputComponent = {
 
         static $inject: string[] = [
             '$element',
-            'FileUpload'
+            'FileUploader'
         ];
 
         constructor(

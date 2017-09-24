@@ -1,17 +1,18 @@
 {
   "name": "angular-file-upload-components",
   "version": "0.2.1",
-  "main": "index.ts",
+  "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack",
     "build-prod": "webpack --env.production",
     "serve": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --progress --watch"
   },
   "author": "Viktor Carlén",
   "description": "Components for quickly implementing angular-file-upload",
   "private": false,
-  "license": "mit",
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.6.x",
     "angular-file-upload": "^2.5.0"

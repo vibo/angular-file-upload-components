@@ -33999,6 +33999,7 @@ $provide.value("$locale", {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FileDropZoneComponent = {
+    transclude: true,
     bindings: {
         onDrop: '&'
     },
@@ -34028,7 +34029,7 @@ exports.FileDropZoneComponent = {
             return FileDropZoneCOmponentController;
         }()),
         _a.$inject = [
-            'FileUpload'
+            'FileUploader'
         ],
         _a)
 };
@@ -34081,7 +34082,7 @@ exports.FileInputComponent = {
         }()),
         _a.$inject = [
             '$element',
-            'FileUpload'
+            'FileUploader'
         ],
         _a)
 };

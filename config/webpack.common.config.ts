@@ -36,7 +36,6 @@ export const config: webpack.Configuration = {
         // Generate HTML index file for dist
         // Dynamically injets bundle
         new HtmlWebpackPlugin({
-            filename: 'demo/index.html',
             inject: 'head',
             template: './src/index.html'
         }),
