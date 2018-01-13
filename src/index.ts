@@ -4,7 +4,7 @@ import { FileSelectionComboComponent } from './components/file-selection-combo/f
 
 import './styles/index.less';
 
-// Ugly fix
+// Ugly fix; we don't want to import our angular here
 declare const angular: any;
 
 export default angular
